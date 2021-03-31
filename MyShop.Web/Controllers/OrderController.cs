@@ -5,45 +5,39 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyShop.Domain.Models;
 using MyShop.Infrastructure;
+using MyShop.Infrastructure.Repositories;
 using MyShop.Web.Models;
 
-namespace MyShop.Web.Controllers
-{
-    public class OrderController : Controller
-    {
-        private ShoppingContext context;
+namespace MyShop.Web.Controllers {
+    public class OrderController : Controller {
+        private readonly IRepository<Order> orderRepository;
+        private readonly IRepository<Product> productRepository;
 
-        public OrderController()
-        {
-            context = new ShoppingContext();
+        public OrderController(IRepository<Order> orderRepository, 
+            IRepository<Product> productRepository) {
+            this.orderRepository = orderRepository;
+            this.productRepository = productRepository;
         }
 
-        public IActionResult Index()
-        {
-            var orders = context.Orders
-                .Include(order => order.LineItems)
-                .ThenInclude(lineItem => lineItem.Product)
-                .Where(order => order.OrderDate > DateTime.UtcNow.AddDays(-1)).ToList();
-
+        public IActionResult Index() {
+            var orders = orderRepository
+                .Find(order => order.OrderDate > DateTime.UtcNow.AddDays(-1));
             return View(orders);
         }
 
-        public IActionResult Create()
-        {
-            var products = context.Products.ToList();
+        public IActionResult Create() {
+            var products = productRepository.All();
 
             return View(products);
         }
 
         [HttpPost]
-        public IActionResult Create(CreateOrderModel model)
-        {
+        public IActionResult Create(CreateOrderModel model) {
             if (!model.LineItems.Any()) return BadRequest("Please submit line items");
 
             if (string.IsNullOrWhiteSpace(model.Customer.Name)) return BadRequest("Customer needs a name");
 
-            var customer = new Customer
-            {
+            var customer = new Customer {
                 Name = model.Customer.Name,
                 ShippingAddress = model.Customer.ShippingAddress,
                 City = model.Customer.City,
@@ -51,8 +45,7 @@ namespace MyShop.Web.Controllers
                 Country = model.Customer.Country
             };
 
-            var order = new Order
-            {
+            var order = new Order {
                 LineItems = model.LineItems
                     .Select(line => new LineItem { ProductId = line.ProductId, Quantity = line.Quantity })
                     .ToList(),
@@ -60,9 +53,10 @@ namespace MyShop.Web.Controllers
                 Customer = customer
             };
 
-            context.Orders.Add(order);
-
-            context.SaveChanges();
+            //context.Orders.Add(order);
+            //context.SaveChanges();
+            orderRepository.Add(order);
+            orderRepository.SaveChanges();
 
             return Ok("Order Created");
         }

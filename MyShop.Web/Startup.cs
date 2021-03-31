@@ -6,22 +6,18 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MyShop.Domain.Models;
 using MyShop.Infrastructure;
+using MyShop.Infrastructure.Repositories;
 
-namespace MyShop.Web
-{
-    public class Startup
-    {
-        public Startup(IConfiguration configuration)
-        {
+namespace MyShop.Web {
+    public class Startup {
+        public Startup(IConfiguration configuration) {
             Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
 
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
+        public void ConfigureServices(IServiceCollection services) {
+            services.Configure<CookiePolicyOptions>(options => {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
@@ -32,13 +28,13 @@ namespace MyShop.Web
             CreateInitialDatabase();
 
             services.AddTransient<ShoppingContext>();
-       
+            services.AddTransient<IRepository<Order>, OrderRepository>();
+            services.AddTransient<IRepository<Product>, ProductRepository>();
+            services.AddTransient<IRepository<Customer>, CustomerRepository>();
         }
 
-        public void CreateInitialDatabase()
-        {
-            using (var context = new ShoppingContext())
-            {
+        public void CreateInitialDatabase() {
+            using (var context = new ShoppingContext()) {
                 context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
 
@@ -59,14 +55,11 @@ namespace MyShop.Web
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
+            if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
+            else {
                 app.UseExceptionHandler("/Order/Error");
                 app.UseHsts();
             }
@@ -75,8 +68,7 @@ namespace MyShop.Web
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            app.UseMvc(routes =>
-            {
+            app.UseMvc(routes => {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Order}/{action=Index}/{id?}");
