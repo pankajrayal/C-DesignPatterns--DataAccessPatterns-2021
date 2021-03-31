@@ -1,0 +1,24 @@
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\MyShop.Infrastructure\bin\Debug\netstandard2.0\MyShop.Infrastructure.deps.json
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\MyShop.Infrastructure\bin\Debug\netstandard2.0\MyShop.Infrastructure.dll
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\MyShop.Infrastructure\bin\Debug\netstandard2.0\MyShop.Infrastructure.pdb
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\MyShop.Infrastructure\bin\Debug\netstandard2.0\MyShop.Domain.dll
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\MyShop.Infrastructure\bin\Debug\netstandard2.0\MyShop.Domain.pdb
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\MyShop.Infrastructure\obj\Debug\netstandard2.0\MyShop.Infrastructure.csprojAssemblyReference.cache
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\MyShop.Infrastructure\obj\Debug\netstandard2.0\MyShop.Infrastructure.AssemblyInfoInputs.cache
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\MyShop.Infrastructure\obj\Debug\netstandard2.0\MyShop.Infrastructure.AssemblyInfo.cs
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\MyShop.Infrastructure\obj\Debug\netstandard2.0\MyShop.Infrastructure.csproj.CoreCompileInputs.cache
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\MyShop.Infrastructure\obj\Debug\netstandard2.0\MyShop.Infrastructure.csproj.CopyComplete
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\MyShop.Infrastructure\obj\Debug\netstandard2.0\MyShop.Infrastructure.dll
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\MyShop.Infrastructure\obj\Debug\netstandard2.0\MyShop.Infrastructure.pdb
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\Unit of Work Pattern in C#\MyShop.Infrastructure\bin\Debug\netstandard2.0\MyShop.Infrastructure.deps.json
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\Unit of Work Pattern in C#\MyShop.Infrastructure\bin\Debug\netstandard2.0\MyShop.Infrastructure.dll
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\Unit of Work Pattern in C#\MyShop.Infrastructure\bin\Debug\netstandard2.0\MyShop.Infrastructure.pdb
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\Unit of Work Pattern in C#\MyShop.Infrastructure\bin\Debug\netstandard2.0\MyShop.Domain.dll
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\Unit of Work Pattern in C#\MyShop.Infrastructure\bin\Debug\netstandard2.0\MyShop.Domain.pdb
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\Unit of Work Pattern in C#\MyShop.Infrastructure\obj\Debug\netstandard2.0\MyShop.Infrastructure.csprojAssemblyReference.cache
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\Unit of Work Pattern in C#\MyShop.Infrastructure\obj\Debug\netstandard2.0\MyShop.Infrastructure.AssemblyInfoInputs.cache
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\Unit of Work Pattern in C#\MyShop.Infrastructure\obj\Debug\netstandard2.0\MyShop.Infrastructure.AssemblyInfo.cs
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\Unit of Work Pattern in C#\MyShop.Infrastructure\obj\Debug\netstandard2.0\MyShop.Infrastructure.csproj.CoreCompileInputs.cache
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\Unit of Work Pattern in C#\MyShop.Infrastructure\obj\Debug\netstandard2.0\MyShop.Infrastructure.csproj.CopyComplete
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\Unit of Work Pattern in C#\MyShop.Infrastructure\obj\Debug\netstandard2.0\MyShop.Infrastructure.dll
+C:\D-Drive\Pankaj\Learning\code\DotNet\DataAccessPatterns\Unit of Work Pattern in C#\MyShop.Infrastructure\obj\Debug\netstandard2.0\MyShop.Infrastructure.pdb
